@@ -11,3 +11,4 @@ jobs:
           user: ${{ secrets.ftp_user }}
           password: ${{ secrets.ftp_password }}
           remote_dir: /voice-analytics.ru/docs
+          local_dir: ./
