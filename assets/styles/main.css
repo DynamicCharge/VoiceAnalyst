@@ -5,6 +5,9 @@ body {
 * {
     box-sizing: border-box;
 }
+.of-hidden {
+    overflow: hidden !important;
+}
 .container {
     max-width: 1620px;
     width: 100%;
@@ -93,7 +96,7 @@ body {
 .title__headline {
     color: #fff;
     max-width: 919px;
-    width: 100%;
+    width: max-content;
     margin: 0;
     margin-bottom: 256px;
 }
@@ -125,6 +128,59 @@ body {
 }
 .header__logo {
     margin-left: 204px;
+}
+.header__logo img {
+    display: block;
+    width: 100%;
+}
+.header__burger {
+    width: 22px;
+    height: 14px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    flex-shrink: 0;
+    display: none;
+}
+.header__burger.is-active .header__burger-item {
+    opacity: 0;
+}
+.header__burger.is-active::before {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+.header__burger.is-active::after {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    bottom: unset;
+}
+
+.header__burger::before,
+.header__burger::after {
+    content: '';
+    height: 2px;
+    width: 100%;
+    background: #fff;
+    display: block;
+    position: absolute;
+}
+.header__burger::before {
+    top: 0;
+    left: 0;
+}
+.header__burger::after {
+    bottom: 0;
+    left: 0;
+}
+.header__burger-item {
+    height: 2px;
+    background: #fff;
+    width: 100%;
+    border-radius: 1px;
 }
 
 .title__list-wrapper {
@@ -389,4 +445,225 @@ body {
 }
 .footer__text {
 
+}
+
+@media screen and (max-width: 1630px) {
+    .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .analytics__bottom {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+@media screen and (max-width: 1500px) {
+    .page-h1 {
+        font-size: 50px;
+    }
+}
+@media screen and (max-width: 1235px) {
+    .page-h1 {
+        font-size: 40px;
+    }
+    .header__logo {
+        margin-left: 104px;
+    }
+    .whatis__headline,
+    .analytics__headline {
+        flex-direction: column;
+    }
+    .whatis__header,
+    .analytics__header {
+        margin-right: 0;
+        margin-bottom: 68px;
+    }
+    .title__info {
+        max-width: 100%;
+        margin-top: 110px;
+    }
+    .analytics__bottom {
+        margin-top: 56px;
+        flex-direction: column;
+    }
+    .analytics__bottom-desc {
+        text-align: center;
+    }
+    .slider-nav.--prev {
+        display: none;
+    }
+    .analytics__bottom-left {
+        flex-direction: column;
+        margin-right: 0;
+    }
+    .slider-nav.--next {
+        margin-left: 0;
+        margin-top: -130px;transform: rotate(90deg);
+    }
+    .slider-nav.--next img {
+        width: 100%;
+        display: block;
+    }
+    .analytics__bottom-right {
+        margin-top: -80px;
+        width: 100%;
+    }
+    .analytics__bottom-right__list {
+        margin-top: 79px;
+    }
+    .title {
+        padding: 20px 0 79px;
+    }
+    .analytics {
+        padding: 79px 0 73px;
+    }
+    .whatis__table-header::before {
+        margin-right: 10px;
+        width: 10px;
+        height: 10px;
+    }
+    .whatis__table-row {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+    .whatis__table-text {
+        padding-left: 20px;
+    }
+    .analytics__grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    .whatis {
+        padding: 80px 0 143px;
+    }
+}
+@media screen and (max-width: 990px) {
+    .header {
+        order: 1;
+        width: 100%;
+        justify-content: space-between;
+        margin-bottom: 60px;
+    }
+    .title__headline {
+        order: 2;
+    }
+    .title__list-wrapper {
+        order: 3;
+    }
+    .title__info {
+        order: 4;
+    }
+    .title__list-wrapper {
+        align-self: initial;
+        width: 100%;
+        max-width: 100%;
+    }
+    .title__headline {
+        margin-bottom: 218px;
+    }
+    .analytics__variations {
+        grid-template-columns: 1fr;
+        margin-top: 0;
+    }
+    .whatis__bottom-img {
+        display: none;
+    }
+}
+@media screen and (max-width: 768px) {
+    .page-h1 {
+        font-size: 26px;
+        line-height: 29.37px;
+        letter-spacing: -1.1749813556671143px;
+        max-width: 223px;
+    }
+    .page-h2 {
+        font-size: 34px;
+        line-height: 40.19px;
+    }
+    .page-text-20 {
+        font-size: 14px;
+    }
+    .page-text-18 {
+        font-size: 16px;
+        line-height: 22px;
+    }
+    .page-h3 {
+        font-size: 20px;
+        line-height: 30px;
+    }
+    .analytics__bottom-header {
+        min-height: 90px;
+    }
+    .whatis__body {
+        margin-top: 70px;
+    }
+    .whatis__subheader {
+        margin-bottom: 49px;
+    }
+    .whatis__table-header {
+        font-size: 16px;
+        line-height: 30px;
+        align-items: start;
+    }
+    .whatis__table-header::before {
+        position: relative;
+        top: 10px;
+    }
+    .analytics__grid {
+        grid-template-columns: 1fr;
+        margin-bottom: 120px;
+    }
+    .analytics__grid-item.--dark {
+        padding: 0;
+        padding-bottom: 31px;
+    }
+    .analytics__variations-item {
+        grid-template-columns: 1fr;
+    }
+    .analytics__variations-item {
+        padding: 45px 30px;
+    }
+    .footer-wrapper {
+        flex-direction: column;
+        justify-content: center;
+    }
+    .footer__text {
+        margin-bottom: 40px;
+    }
+    .footer {
+        padding: 139px 0 153px;
+    }
+    .header__burger {
+        display: flex;
+        z-index: 101;
+    }
+    .header__nav-wrapper {
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translateX(-100%);
+        background: #000;
+        padding: 77px 41px;
+        height: 100vh;
+        width: 100vw;
+        z-index: 100;
+        transition: .3s;
+    }
+    .header__nav-wrapper.is-active {
+        transform: translateX(0);
+    }
+    .header__nav-item a {
+        font-weight: 500;
+    }
+    .title__info {
+        padding: 26px 23px 50px;
+    }
+    .header__logo {
+        margin-left: 0;
+    }
+    .header {
+        align-items: center;
+    }
+    .header__logo {
+        width: 65px;
+    }
 }
