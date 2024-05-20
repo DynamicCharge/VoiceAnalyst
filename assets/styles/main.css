@@ -127,7 +127,7 @@ body {
     text-decoration: none;
 }
 .header__logo-wrapper {
-    margin-left: 204px;
+    margin-left: 78px;
     display: flex;
     flex-direction: column;
     justify-content: start;
@@ -498,7 +498,7 @@ body {
         font-size: 40px;
     }
     .header__logo-wrapper {
-        margin-left: 104px;
+        margin-left: 40px;
     }
     .whatis__headline,
     .analytics__headline {
