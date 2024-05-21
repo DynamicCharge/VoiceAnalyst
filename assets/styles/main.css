@@ -474,8 +474,19 @@ body {
     justify-content: space-between;
     align-items: center;
 }
+.footer-info {
+
+}
 .footer__text {
 
+}
+.footer__time {
+    display: block;
+    margin-bottom: 10px;
+}
+.footer__phone {
+    color: #fff;
+    text-decoration: none;
 }
 
 @media screen and (max-width: 1630px) {
@@ -663,6 +674,13 @@ body {
     .footer-wrapper {
         flex-direction: column;
         justify-content: center;
+    }
+    .footer-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+        margin-bottom: 40px;
     }
     .footer__text {
         margin-bottom: 40px;
