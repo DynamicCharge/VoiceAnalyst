@@ -139,8 +139,10 @@ body {
     display: block;
 }
 .header-time {
-    margin-bottom:9px;
     font-weight: 500;
+}
+.header-phone {
+    margin-top:9px;
 }
 .header__logo-info {
     display: flex;
@@ -482,11 +484,12 @@ body {
 }
 .footer__time {
     display: block;
-    margin-bottom: 10px;
 }
 .footer__phone {
     color: #fff;
     text-decoration: none;
+    display: block;
+    margin-top: 10px;
 }
 
 @media screen and (max-width: 1630px) {
